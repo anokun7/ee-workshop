@@ -11,7 +11,7 @@ In this lab we'll use a Docker EE cluster. You will have an environment that is 
 > **Introduction**:
 >	* [What is the Docker Platform](#intro1)
 >	* [Overview of Orchestration](#intro2)
->		* [Basics of Docker Swarm mode](#intro2.1)
+>		* [Basics of Docker Swarm](#intro2.1)
 >		* [Basics of Kubernetes](#intro2.2)
 
 > **Tasks**:
@@ -85,14 +85,14 @@ Throughout the lab you will be asked to provide either hostnames or login creden
 Docker EE provides an integrated, tested and certified platform for apps running on enterprise Linux or Windows operating systems and Cloud providers. Docker EE is tightly integrated to the the underlying infrastructure to provide a native, easy to install experience and an optimized Docker environment. Docker Certified Infrastructure, Containers and Plugins are exclusively available for Docker EE with cooperative support from Docker and the Certified Technology Partner.
 
 ### <a name="intro2"></a>Overview of Orchestration
-While it is easy to run an application in isolation on a single machine, orchestration allows you to coordinate multiple machines to manage an application, with features like replication, encryption, loadbalancing, service discovery and more. If you've read anything about Docker, you have probably heard of Kubernetes and Docker swarm mode. Docker EE allows you to use either Docker swarm mode or Kubernetes for orchestration. 
+While it is easy to run an application in isolation on a single machine, orchestration allows you to coordinate multiple machines to manage an application, with features like replication, encryption, loadbalancing, service discovery and more. If you've read anything about Docker, you have probably heard of Kubernetes and Docker Swarm. Docker EE allows you to use either Docker swarm or Kubernetes for orchestration. 
 
-Both Docker swarm mode and Kubernetes are declarative: you declare your cluster's desired state, and applications you want to run and where, networks, and resources they can use. Docker EE simplifies this by taking common concepts and moving them to the a shared resource.
+Both Docker Swarm and Kubernetes are declarative: you declare your cluster's desired state, and applications you want to run and where, networks, and resources they can use. Docker EE simplifies this by taking common concepts and moving them to the a shared resource.
 
-#### <a name="intro2.1"></a>Overview of Docker Swarm mode
+#### <a name="intro2.1"></a>Overview of Docker Swarm
 A swarm is a group of machines that are running Docker and joined into a cluster. After that has happened, you continue to run the Docker commands you’re used to, but now they are executed on a cluster by a swarm manager. The machines in a swarm can be physical or virtual. After joining a swarm, they are referred to as nodes.
 
-Swarm mode uses managers and workers to run your applications. Managers run the swarm cluster, making sure nodes can communicate with each other, allocate applications to different nodes, and handle a variety of other tasks in the cluster. Workers are there to provide extra capacity to your applications. In this workshop, you have one manager and three workers.
+Swarm uses managers and workers to run your applications. Managers run the swarm cluster, making sure nodes can communicate with each other, allocate applications to different nodes, and handle a variety of other tasks in the cluster. Workers are there to provide extra capacity to your applications. In this workshop, you have one manager and three workers.
 
 #### <a name="intro2.2"></a>Overview of Kubernetes
 
@@ -615,7 +615,7 @@ Now that we've moved the app and updated it, we're going to add in a user sign-i
 
 ## <a name="task4"></a>Task 4: Deploy to Kubernetes
 
-Now that we have built, deployed and scaled a multi OS application to Docker EE using Swarm mode for orchestration, let's learn how to use Docker EE with Kubernetes.
+Now that we have built, deployed and scaled a multi OS application to Docker EE using Swarm for orchestration, let's learn how to use Docker EE with Kubernetes.
 
 Docker EE lets you choose the orchestrator to use to deploy and manage your application, between Swarm and Kubernetes. In the previous tasks we have used Swarm for orchestration. In this section we will deploy the application to Kubernetes and see how Docker EE exposes Kubernetes concepts.
 
